@@ -8,7 +8,6 @@ env:
     - CONTAINER_NAME="match-box"
 before_install:
   - docker pull "$IMAGE_NAME"
-  - docker ps -a
   - docker run --name "$CONTAINER_NAME" --volume "$PWD/":/repo/ --rm -t -d "$IMAGE_NAME" 
 script:
   - docker exec -it "$CONTAINER_NAME" bash -c "cd /repo/; bash /repo/rv.sh"
