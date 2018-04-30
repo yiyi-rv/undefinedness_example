@@ -11,5 +11,5 @@ before_install:
   - docker ps -a
   - docker run --name "$CONTAINER_NAME" --volume "$PWD/":/repo/ --rm -t -d "$IMAGE_NAME" 
 script:
-  - docker exec -w "/repo" -it "$CONTAINER_NAME" bash -c "cd /repo/; ls ;bash /repo/rv.sh"
+  - docker exec -it "$CONTAINER_NAME" bash -c "cd /repo/; ls ;bash /repo/rv.sh"
   - docker container stop "$CONTAINER_NAME"
