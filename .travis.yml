@@ -3,7 +3,7 @@ services:
   - docker
 language: c
 env:
-  - IMAGE_NAME="runtimeverification/match-box"
+  - IMAGE_NAME="runtimeverification/match-box:0.0.1"
 before_install:
   - docker pull "$IMAGE_NAME"
   - docker ps -a
