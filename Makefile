@@ -1,6 +1,6 @@
 SRCS = $(wildcard *.c)
 PROGS = $(patsubst %.c,%,$(SRCS))
-# CC = kcc
+CC = kcc
 
 all: $(PROGS)
 %: %.c
