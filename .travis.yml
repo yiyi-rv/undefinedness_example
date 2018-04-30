@@ -9,8 +9,10 @@ env:
 before_install:
   - docker pull "$IMAGE_NAME"
   - docker ps -a
-  - docker run --name "$CONTAINER_NAME" --volume "$PWD/":/root/ --rm -t -d "$IMAGE_NAME" 
+  - docker run --name "$CONTAINER_NAME" --volume "$PWD/":/repo/ --rm -t -d "$IMAGE_NAME" 
 script:
   - pwd
-  - docker exec -it "$CONTAINER_NAME" bash /root/rv.sh
+  - ls
+  - docker exec -w "/repo" -it "$CONTAINER_NAME" bash -c "pwd;ls"
+  - docker exec -w "/repo" -it "$CONTAINER_NAME" bash /repo/rv.sh
   - docker container stop "$CONTAINER_NAME"

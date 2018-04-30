@@ -1,7 +1,6 @@
 #!/bin/bash
 echo "This is rv.sh"
 make
-
 ./1-unsequenced-side-effect
 ./2-buffer-overflow
 ./3-array-in-struct
@@ -11,5 +10,4 @@ make
 ./7-out-of-lifetime
 ./8-int-overflow-tricky
 ./9-memory-leak
-
 make clean
