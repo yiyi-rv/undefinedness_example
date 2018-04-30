@@ -1,6 +1,7 @@
 sudo: required
 services:
   - docker
+language: c
 env:
   - IMAGE_NAME="runtimeverification/match-box"
 before_install:
