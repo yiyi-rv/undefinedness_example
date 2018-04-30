@@ -4,11 +4,12 @@ services:
 language: c
 env:
   - IMAGE_NAME="runtimeverification/match-box"
+  - CONTAINER_NAME="match-box"
 before_install:
   - docker pull "$IMAGE_NAME"
   - docker ps -a
-  - docker run --name match-box --volume "$PWD/":/root/ --rm -t -d "$IMAGE_NAME" 
+  - docker run --name "$CONTAINER_NAME" --volume "$PWD/":/root/ --rm -t -d "$IMAGE_NAME" 
 script:
   - pwd
-  - docker exec -it "$IMAGE_NAME" bash /root/rv.sh
-  - docker container stop match-box
+  - docker exec -it "$CONTAINER_NAME" bash /root/rv.sh
+  - docker container stop "$CONTAINER_NAME"
