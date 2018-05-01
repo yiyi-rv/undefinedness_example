@@ -10,4 +10,4 @@ make
 ./7-out-of-lifetime
 ./8-int-overflow-tricky
 ./9-memory-leak
-make clean
+make clean  
