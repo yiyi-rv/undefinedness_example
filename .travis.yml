@@ -10,5 +10,5 @@ before_install:
   - docker pull "$IMAGE_NAME"
   - docker run --name "$CONTAINER_NAME" --volume "$PWD/":/repo/ --rm -t -d "$IMAGE_NAME" 
 script:
-  - docker exec -it "$CONTAINER_NAME" bash -c "cd /repo/; git remote -v; git branch; git rev-parse --abbrev-ref HEAD;"
+  - docker exec -it "$CONTAINER_NAME" bash -c "cd /repo/; git remote -v; git branch; git rev-parse --abbrev-ref HEAD; git for-each-ref --format='%(objectname) %(refname:short)' refs/heads | awk \"/^$(git rev-parse HEAD)/ {print \$2}\";"
   - docker container stop "$CONTAINER_NAME"
