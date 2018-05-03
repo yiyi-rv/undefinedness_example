@@ -10,4 +10,6 @@ make
 ./7-out-of-lifetime
 ./8-int-overflow-tricky
 ./9-memory-leak
+rv-html-report my_errors.json -o report
+rv-upload-report `pwd`/report
 make clean  
