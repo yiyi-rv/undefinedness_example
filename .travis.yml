@@ -11,4 +11,4 @@ before_install:
   - docker run --name "$CONTAINER_NAME" --volume "$PWD/":/repo/ --rm -t -d "$IMAGE_NAME" 
 script:
   - docker exec -it "$CONTAINER_NAME" bash -c "cd /repo/; bash /repo/rv.sh"
-  - docker container stop "$CONTAINER_NAME"
+  - docker container stop "$CONTAINER_NAME" 
