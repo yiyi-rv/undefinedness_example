@@ -5,7 +5,12 @@
 
 ## Build your project with RV-Toolkit using TravisCI.  
 
-First, create a `.travis.yml` file under your project directory and add the following content to it:
+First, log in to [TravisCI](https://travis-ci.org/) website and make sure your GitHub project is enabled like this in your profile page:  
+
+<img width="1440" alt="screen shot 2018-05-10 at 5 13 32 pm" src="https://user-images.githubusercontent.com/1908863/39896860-80bc5122-5475-11e8-842d-d60786f7ff83.png">
+ 
+
+Second, create a `.travis.yml` file under your project directory and add the following content to it:
 
 ```yaml
 sudo: required  # This will request TravisCI to grant you sudo privilege.
@@ -59,3 +64,5 @@ rv-upload-report `pwd`/report
 
 # Done.
 ```
+
+Then every time you make a commit to repository, the TravisCI will start a build and push your HTML report to RV-Toolkit website.
