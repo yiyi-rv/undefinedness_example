@@ -33,7 +33,7 @@ script:
   - docker exec -it "$CONTAINER_NAME" bash -c "cd /repo/; bash /repo/rv.sh"
 
   # This will stop and cleanup the docker container.
-  - docker container stop "$CONTAIv
+  - docker container stop "$CONTAINER_NAME"
 ```
 
 After you set up your `.travis.yml`, you can then create a `rv.sh` to configure your build.
