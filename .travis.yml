@@ -4,8 +4,8 @@ services:
 language: c
 env:
   global:
-    - IMAGE_NAME="runtimeverification/match-box"
-    - CONTAINER_NAME="match-box"
+    - IMAGE_NAME="runtimeverification/rv-sandbox"
+    - CONTAINER_NAME="rv-sandbox"
 before_install:
   - docker pull "$IMAGE_NAME"
   - docker run --name "$CONTAINER_NAME" --volume "$PWD/":/repo/ --rm -t -d "$IMAGE_NAME" 
