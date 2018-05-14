@@ -1,6 +1,5 @@
 #!/bin/bash
 echo "This is rv.sh"
-sudo apt-get install make -y
 make
 ./1-unsequenced-side-effect
 ./2-buffer-overflow
