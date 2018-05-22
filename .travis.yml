@@ -2,13 +2,5 @@ sudo: required
 services:
   - docker
 language: c
-env:
-  global:
-    - IMAGE_NAME="runtimeverification/rv-sandbox"
-    - CONTAINER_NAME="rv-sandbox"
-before_install:
-  - docker pull "$IMAGE_NAME"
-  - docker run --name "$CONTAINER_NAME" --volume "$PWD/":/repo/ --rm -t -d "$IMAGE_NAME" 
 script:
-  - docker exec -it "$CONTAINER_NAME" bash -c "cd /repo/; bash /repo/rv.sh"
-  - docker container stop "$CONTAINER_NAME" 
+  - bash <(curl -s https://runtimeverification.com/bash)
