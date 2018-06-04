@@ -12,4 +12,4 @@ make
 ./9-memory-leak
 rv-html-report my_errors.json -o report
 rv-upload-report `pwd`/report
-make clean  
+make clean
