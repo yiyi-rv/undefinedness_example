@@ -3,4 +3,4 @@ services:
   - docker
 language: c
 script:
-  - bash <(curl -s https://runtimeverification.com/bash)
+  - bash <(curl -s https://runtimeverification.com/bash) nightly
