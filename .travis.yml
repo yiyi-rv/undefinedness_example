@@ -3,4 +3,4 @@ services:
   - docker
 language: c
 script:
-  - bash <(curl -s https://runtimeverification.com/toolkit/docker/bash) nightly
+  - bash <(curl -s https://runtimeverification.com/sandbox/yiyiwang/sandbox/toolkit/docker/bash) dev
