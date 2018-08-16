@@ -1,5 +1,6 @@
 #!/bin/bash
 echo "This is rv.sh"
+echo $TRAVIS_BRANCH
 make
 ./1-unsequenced-side-effect
 ./2-buffer-overflow
