@@ -1,6 +1,2 @@
-sudo: required
-services:
-  - docker
-language: c
 script:
-  - bash <(curl -s https://runtimeverification.com/toolkit/docker/bash) nightly
+  - if [[ $TRAVIS_BRANCH == master ]]; then bash <(curl -s https://runtimeverification.com/toolkit/docker/bash) nightly; fi
