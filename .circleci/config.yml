@@ -2,9 +2,7 @@ version: 2
 jobs:
   build:
     docker:
-      - image: runtimeverification/rv-sandbox:nightly-2018-09-12
+      - image: runtimeverification/rv-sandbox:dev
     steps:
       - checkout
-      - run: printenv
-      - run: pwd
-      - run: ls .
+      - run: bash ./rv.sh
