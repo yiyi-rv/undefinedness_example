@@ -1,6 +1,0 @@
-sudo: required
-services:
-  - docker
-language: c
-script:
-  - bash <(curl -s https://runtimeverification.com/toolkit/docker/bash) nightly
