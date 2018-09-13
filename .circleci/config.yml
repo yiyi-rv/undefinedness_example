@@ -4,5 +4,6 @@ jobs:
     docker:
       - image: runtimeverification/rv-sandbox:nightly-2018-09-12
     steps:
-      - printenv
-      - ls ../
+      - checkout
+      - run: printenv
+      - run: ./
