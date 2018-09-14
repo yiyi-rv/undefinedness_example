@@ -1,9 +1,0 @@
-version: 2
-jobs:
-  build:
-    docker:
-      - image: runtimeverification/rv-sandbox:nightly-2018-09-12
-    steps:
-      - checkout
-      - run: printenv
-      - run: ./

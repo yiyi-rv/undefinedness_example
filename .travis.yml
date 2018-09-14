@@ -1,4 +1,2 @@
-image: Ubuntu
-build: off
-test_script:
+script:
   - bash <(curl -s https://ftp.runtimeverification.com/sandbox/yiyiwang/sandbox-2/toolkit/docker/bash) dev
