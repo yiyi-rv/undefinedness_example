@@ -1,0 +1,4 @@
+image: runtimeverification/rv-sandbox:2018-09-14
+build: off
+test_script:
+  - printenv
