@@ -1,4 +1,5 @@
-image: runtimeverification/rv-sandbox:2018-09-14
+image: Ubuntu
 build: off
 test_script:
   - printenv
+  - docker pull runtimeverification/rv-sandbox:nightly
